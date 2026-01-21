@@ -1,3 +1,4 @@
+"use strict";
 /*    JavaScript 7th Edition
       Chapter 4
       Chapter case
