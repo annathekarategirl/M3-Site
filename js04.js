@@ -88,6 +88,7 @@ function verifyMonths() {
    try {
       if (!(monthsBox.value >=1 && monthsBox.value <= 12))
          throw "Enter months between 1 and 12";
+   testFormCompleteness();
    } catch(error) {
       messageElement.innerHTML = error;
       messageHeadElement.innerHTML = "";
