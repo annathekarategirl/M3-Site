@@ -69,7 +69,13 @@ function createEventListeners() {
 
 /* verify acres text box entry is a positive number */
 function verifyAcres() { //closed paranthesises
-   testFormCompleteness();      
+   try {
+      if (!(acresBox.value > 0)) throw "Enter a positive acreage";
+      testFormCompleteness();
+   }   catch(error) {
+      messageElement.innerHTML = error;
+      messageHeadElement.innerHTML = "";
+   }
 }
 
 /* verify at least one crops checkbox is checked */
